@@ -13,4 +13,4 @@ jobs:
       - name: Setup Buildx
         uses: docker/setup-buildx-action@v2
       - name: Build image
-        run: docker build ./server  -t server-build
+        run: docker build .  -t demo-server
