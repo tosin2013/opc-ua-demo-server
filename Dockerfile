@@ -5,7 +5,7 @@ FROM gradle:7.2-jdk11 AS build
 WORKDIR /app
 
 # Copy the host's build file and source code into the container
-COPY build.gradle.kts .
+COPY build.gradle .
 COPY src ./src
 
 # Use Gradle's wrapper to build the project
