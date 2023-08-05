@@ -111,6 +111,11 @@ dependencies {
 
     implementation 'org.eclipse.milo:milo-examples:0.6.10'
     implementation 'org.eclipse.milo:opc-ua-stack:0.6.10'
+
+    implementation 'com.digitalpetri.opcua:stack-server:1.1.1'
+    implementation 'com.digitalpetri.opcua:stack-core:1.1.1'
+    implementation 'com.digitalpetri.opcua:stack-client:1.1.1'
+
 }
 
 
