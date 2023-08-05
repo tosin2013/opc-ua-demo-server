@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk-slim
+FROM openjdk:8-jdk-slim
 
 RUN mkdir -p /opt/milo-demo-server
 
