@@ -18,7 +18,9 @@ RUN ls -R .
 RUN chown 1001:0 /opt 
 
 # Optionally, change the permissions of the directory
-RUN chmod g+w /opt &&  chmod g+w /.local/share/milodemoserver/security
+RUN chmod g+w /opt && \
+    mkdir -p /.local/share/milodemoserver/security && \
+    chmod g+w /.local/share/milodemoserver/security
 
 
 CMD ["/opt/milo-demo-server/bin/milo-demo-server"]
