@@ -8,9 +8,9 @@ WORKDIR /opt/milo-demo-server/
 RUN apt-get update && \
     apt-get install -y curl unzip && \
     rm -rf /var/lib/apt/lists/* && \
-    curl -L https://github.com/digitalpetri/opc-ua-demo-server/releases/download/v0.3/milo-demo-server-linux.zip -o milo-demo-server.zip && \
-    unzip milo-demo-server.zip && \
-    rm milo-demo-server.zip
+    curl -L https://github.com/digitalpetri/opc-ua-demo-server/releases/download/v0.3/milo-demo-server-linux.zip -o /opt/milo-demo-server/milo-demo-server.zip && \
+    unzip milo-demo-server.zip -d /opt/milo-demo-server/  && \
+    rm /opt/milo-demo-server/milo-demo-server.zip
 
 RUN ls -R .
 
