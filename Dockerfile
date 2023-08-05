@@ -1,5 +1,5 @@
 # Use the official Gradle image with JDK 11
-FROM gradle:7.2-jdk11 AS build
+FROM gradle:7.2-jdk17 AS build
 
 # Set the working directory inside the image
 WORKDIR /app
@@ -12,7 +12,7 @@ COPY src ./src
 RUN gradle clean build
 
 # Use a smaller base image for the final product
-FROM openjdk:11-jre-slim
+FROM openjdk:17-jre-slim
 
 # Copy the compiled JAR file from the build stage
 COPY --from=build /app/build/libs/*.jar /app/app.jar
