@@ -43,8 +43,6 @@ application {
 }
 
 jar {
-    def details = versionDetails()
-
     manifest {
         attributes(
             "Main-Class": "com.digitalpetri.opcua.server.MiloDemoServer",
@@ -52,7 +50,7 @@ jar {
             "X-Stack-Version": "$miloVersion",
             "X-SDK-Version": "$miloVersion",
             "X-Server-Build-Date": getDate(),
-            "X-Server-Build-Number": details.gitHash,
+            "X-Server-Build-Number": project.version,
             "X-Server-Software-Version": project.version
         )
     }

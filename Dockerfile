@@ -12,7 +12,7 @@ COPY src ./src
 RUN gradle clean build
 
 # Use a smaller base image for the final product
-FROM openjdk:17-jre-slim
+FROM openjdk:17.0.1-jdk-slim
 
 # Copy the compiled JAR file from the build stage
 COPY --from=build /app/build/libs/*.jar /app/app.jar
