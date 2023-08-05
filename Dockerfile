@@ -1,6 +1,10 @@
 # Use the official Gradle image with JDK 11
 FROM gradle:7.2-jdk17 AS build
 
+RUN apt-get update && apt-get install -y procps
+
+RUN mount -t proc proc /proc
+
 # Set the working directory inside the image
 WORKDIR /app
 
