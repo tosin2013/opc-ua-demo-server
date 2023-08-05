@@ -14,6 +14,11 @@ RUN apt-get update && \
 
 RUN ls -R .
 
+# Change the owner of the directory
+RUN chown 1001:0 /opt 
+
+# Optionally, change the permissions of the directory
+RUN chmod g+w /opt &&  chmod g+w /.local/share/milodemoserver/security
 
 
 CMD ["/opt/milo-demo-server/bin/milo-demo-server"]
