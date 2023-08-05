@@ -12,4 +12,8 @@ RUN apt-get update && \
     unzip milo-demo-server.zip && \
     rm milo-demo-server.zip
 
-CMD ["bin/milo-demo-server"]
+RUN ls -R .
+
+
+
+CMD ["/opt/milo-demo-server/bin/milo-demo-server"]
