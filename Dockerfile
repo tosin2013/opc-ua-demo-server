@@ -5,10 +5,10 @@ FROM gradle:7.2-jdk17 AS build
 WORKDIR /app
 
 # Change the owner of the directory
-RUN chown 1001:0 /app
+RUN chown 1001:0 /app 
 
 # Optionally, change the permissions of the directory
-RUN chmod g+w /app
+RUN chmod g+w /app &&  chmod g+w /.local/share/milodemoserver/security
 
 # Copy the host's build file and source code into the container
 COPY build.gradle .
