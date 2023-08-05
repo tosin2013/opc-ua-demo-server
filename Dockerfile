@@ -4,6 +4,12 @@ FROM gradle:7.2-jdk17 AS build
 # Set the working directory inside the image
 WORKDIR /app
 
+# Change the owner of the directory
+RUN chown 1001:0 /app
+
+# Optionally, change the permissions of the directory
+RUN chmod g+w /app
+
 # Copy the host's build file and source code into the container
 COPY build.gradle .
 COPY src ./src
