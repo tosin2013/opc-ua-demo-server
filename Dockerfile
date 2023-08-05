@@ -9,7 +9,7 @@ COPY build.gradle .
 COPY src ./src
 
 # Use Gradle's wrapper to build the project
-RUN gradle clean build
+RUN gradle dist
 
 # Use a smaller base image for the final product
 FROM openjdk:17.0.1-jdk-slim
