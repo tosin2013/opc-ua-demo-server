@@ -109,7 +109,9 @@ dependencies {
     implementation 'ch.qos.logback:logback-classic:1.2.11'
     implementation 'io.github.soc:directories:12'
 
-    implementation 'org.eclipse.milo:opcua-stack-core:0.6.10'
+    implementation 'org.eclipse.milo:milo-examples:0.6.10'
+    implementation 'org.eclipse.milo:opc-ua-stack:0.6.10'
+    implementation 'org.eclipse.milo:milo-examples-server:0.6.10'
 }
 
 
